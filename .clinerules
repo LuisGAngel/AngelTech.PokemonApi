@@ -1,0 +1,43 @@
+# Cline Custom Instructions for AngelTech.PokemonApi
+
+## Relevant rules
+- Before and after any tool use, give me a confidence level (0-10) on how the tool use will help the project
+- Do not be lazy. do not omit code.
+- Before writing code:
+    1. Analyze all code files thoroughly
+    2. Get full context
+    3. Then implement code
+- Ask questions if needed
+- Do not complete the analysis prematurely, continue analyzing even if you think you found a solution
+- Do not build the solution/project after each use of tool. Do not waste developer time on this.
+- Add/update unit tests for all changes unless specified.
+
+## Purpose
+
+This file defines custom instructions for Cline to standardize interactions, code generation, and maintenance for the AngelTech.PokemonApi project. These instructions are always "on" and influence all interactions with Cline regarding this repository.
+
+## Project Overview
+
+AngelTech.PokemonApi is a C# .NET 8 Web API for managing Pokémon data. The project follows standard .NET conventions with Controllers for API endpoints and Models for data representation.
+
+
+## Global Rules
+
+- **Language & Framework:** All code must be in C# and target .NET 8.
+- **File Structure:** 
+  - Place API controllers in `AngelTech.PokemonApi/Controllers/`.
+  - Place data models in `AngelTech.PokemonApi/Models/`.
+  - Configuration files are in the project root or `AngelTech.PokemonApi/`.
+- **Naming Conventions:**
+  - Controllers must end with `Controller` (e.g., `PokemonController`).
+  - Models use PascalCase (e.g., `Pokemon`).
+  - Use descriptive method names for API actions (e.g., `GetAllPokemon`, `AddPokemon`).
+- **API Design:**
+  - Follow RESTful conventions for endpoints.
+  - Use HTTP verbs appropriately (GET, POST, PUT, DELETE).
+  - Return appropriate status codes and error messages.
+- **Documentation:**
+  - Add XML comments to all public classes and methods.
+  - Keep this instruction file updated with any new conventions.
+- **Service Interfaces:**
+  - All services (e.g., PokemonService) must implement an interface (e.g., IPokemonService). The interface should be placed in the same folder as the service.

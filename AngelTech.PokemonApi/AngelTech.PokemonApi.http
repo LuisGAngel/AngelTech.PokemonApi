@@ -1,0 +1,6 @@
+@AngelTech.PokemonApi_HostAddress = http://localhost:5132
+
+GET {{AngelTech.PokemonApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

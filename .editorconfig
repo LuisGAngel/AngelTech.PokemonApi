@@ -1,0 +1,79 @@
+# Based on Microsoft Visual Studio template
+
+root = true
+
+[*.cs]
+# Indentation and spacing
+indent_style = space
+indent_size = 4
+tab_width = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = crlf
+
+# C# files: Aggressive code style and formatting
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+# Require explicit access modifiers
+dotnet_style_require_accessibility_modifiers = always:error
+
+# Naming conventions
+dotnet_naming_rule.interface_should_begin_with_i.severity = error
+dotnet_naming_rule.interface_should_begin_with_i.symbols = interfaces
+dotnet_naming_rule.interface_should_begin_with_i.style = interface_prefix
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+dotnet_naming_symbols.interfaces.required_modifiers = *
+
+dotnet_naming_style.interface_prefix.required_prefix = I
+dotnet_naming_style.interface_prefix.capitalization = pascal_case
+
+dotnet_naming_rule.class_should_be_pascal.severity = error
+dotnet_naming_rule.class_should_be_pascal.symbols = classes
+dotnet_naming_rule.class_should_be_pascal.style = pascal_case_style
+
+dotnet_naming_symbols.classes.applicable_kinds = class
+dotnet_naming_symbols.classes.applicable_accessibilities = *
+dotnet_naming_symbols.classes.required_modifiers = *
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+dotnet_naming_rule.locals_should_be_camel.severity = error
+dotnet_naming_rule.locals_should_be_camel.symbols = locals_and_parameters
+dotnet_naming_rule.locals_should_be_camel.style = camel_case_style
+
+dotnet_naming_symbols.locals_and_parameters.applicable_kinds = local, parameter
+dotnet_naming_symbols.locals_and_parameters.applicable_accessibilities = *
+dotnet_naming_symbols.locals_and_parameters.required_modifiers = *
+
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+
+# Analyzer rules: treat warnings as errors
+dotnet_analyzer_diagnostic.severity = error
+
+# StyleCop (if installed)
+dotnet_diagnostic.SA*.severity = error
+
+# Prefer expression-bodied members
+csharp_style_expression_bodied_methods = when_possible:error
+csharp_style_expression_bodied_properties = when_possible:error
+
+# Prefer using 'is not null' over '!= null'
+csharp_style_prefer_is_not_expression = true:error
+
+# Prefer pattern matching
+csharp_style_pattern_matching_over_is_with_cast_check = true:error
+
+# Prefer object/collection initializers
+dotnet_style_object_initializer = true:error
+
+# namespace declarations
+csharp_style_namespace_declarations = file_scoped:error
+
+# File encoding
+charset = utf-8-bom
+
+# Manual exceptions
+dotnet_diagnostic.IDE0008.severity = none
